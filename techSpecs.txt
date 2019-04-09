@@ -1,0 +1,19 @@
+Display: mobile
+Languages: javascript, html, css
+Browser: Safari (mobile, ios)
+Third Party Technology:
+--google maps (reverse)geocoding info - requires key
+--open-notify API (requires input data as lat long format)
+--weather API
+--sunset API
+
+Users
+
+Astronomy novice
+Site admin / Developer
+
+1. As an astronomy novice I would like to know when the ISS will be visible from my backyard so I can see it for the first time
+
+2. As an astronomy novice I would like to see how big the ISS is compared to my house so I can have a better idea of what I'm looking at. 
+
+3. As an astronomy novice I would like to learn an interesting fact about space so I can know more about this neat subject.
