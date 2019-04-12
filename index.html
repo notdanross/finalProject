@@ -7,7 +7,6 @@
     <title>ISS Pass Times</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
 </head>
 
 <body>
@@ -29,10 +28,37 @@
                 <p>The International Space Station (ISS) is the largest man-made satelite orbiting earth.</p>
         </div>
         <div>
-            <h2> When will the ISS pass over my location?</h2>
+            <form>
+                <h2> When will the ISS pass over my location?</h2>
+                    <p>Enter your address below to get the next times the ISS will be visible from your location.</p>
+                    <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+                <fieldset>
+                    <legend>Your Address</legend>
+                    <p>
+                        <label for="city">
+                            <span>City: </span>
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <input type="text" id="city" name="userCity">
+                    </p>
+                    <p>
+                        <label for="state">
+                            <span>State: </span>
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <input type="text" id="state" name="userState">
+                    </p>
+                    <p> <button type="button" id="getAddress">Submit</button> </p>
+                </fieldset>
+            </form>
+            <div>
+                <p id="latitude"></p>
+            </div>
         </div>    
+
     </main>
+
     <footer></footer>
-</body>
+<script src="main.js"></script></body>
 
 </html>
