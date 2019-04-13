@@ -7,13 +7,14 @@ const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=yH5iS2qa
 const issURL = 'http://api.open-notify.org/iss-pass.json?lat=LAT&lon=LON'
 
 function urlUpdate() {
-    // commented out section of mirrored from eloquent javascript
+    // commented out section is mirrored from eloquent javascript
     // let form = document.querySelector("form");
     // form.addEventListener("submit", event => {
     //     console.log("Saving value", form.elements.value.value);
     //     event.preventDefault();
     // });
-    console.log(document.getElementById('state').getAttribute(value))
+    console.log(document.getElementById('state').getAttribute(userState))
+    // console.log('the button works')
 };
 
 function runGeocode() {
