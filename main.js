@@ -1,6 +1,7 @@
-const userCity  = document.getElementById('city')
+const userStreet  = document.getElementById('street');
+const userCity  = document.getElementById('city');
 const userState = document.getElementById('state');
-
+const userZip = document.getElementById('zip');
 
 // document.getElementById('getAddress').addEventListener('click', urlUpdate);
 
@@ -11,23 +12,12 @@ const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=yH5iS2qa
 
 const issURL = 'http://api.open-notify.org/iss-pass.json?lat=LAT&lon=LON';
 
-function urlUpdate() {
-    // commented out section is mirrored from eloquent javascript
-    // let form = document.querySelector("form");
-    // form.addEventListener("submit", event => {
-    //     console.log("Saving value", form.elements.value.value);
-    //     event.preventDefault();
-    // });
-    console.log(userState)
-    // console.log('the button works')
-};
-
 function runGeocode() {
     event.preventDefault();
     console.log('You submitted an address... here is the latitude and longitude');
-    console.log(userState.value);
+    console.log(encodeURIComponent(userStreet.value));
 
-    fetch(geocodeURL + userCity.value + userState.value)
+    fetch(geocodeURL + encodeURIComponent(userStreet.value) + "," + userCity.value + "," + userState.value + "," + userZip.value)
         .then(function (response) {
             // console.log(response.json());
             return (response.json());

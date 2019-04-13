@@ -35,6 +35,13 @@
                 <fieldset>
                     <legend>Your Address</legend>
                     <p>
+                        <label for="street">
+                            <span>Street: </span>
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <input type="text" id="street" class="street" name="userStreet">
+                    </p>
+                    <p>
                         <label for="city">
                             <span>City: </span>
                             <strong><abbr title="required">*</abbr></strong>
@@ -47,6 +54,13 @@
                             <strong><abbr title="required">*</abbr></strong>
                         </label>
                         <input type="text" id="state" class="state" name="userState">
+                    </p>
+                    <p>
+                        <label for="zipCode">
+                            <span>Zip Code: </span>
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <input type="text" id="zip" class="zipCode" name="userZip">
                     </p>
                     <p> <button type="button" id="getAddress">Submit</button> </p>
                 </fieldset>
