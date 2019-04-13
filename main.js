@@ -42,5 +42,6 @@ function runGeocode() {
             document.getElementById('longitude').innerHTML = "Your longitude:" + " " + longitude;
             userAddress = data["results"][0]["locations"][0]["street"] + ", " + data["results"][0]["locations"][0]["adminArea5"] + ", " + data["results"][0]["locations"][0]["adminArea3"];
             document.getElementById('userAddress').innerHTML = "Your Address:" + " " + userAddress; 
-        })     
+        })
+    // passTimes()     
 };
