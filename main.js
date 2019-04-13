@@ -13,9 +13,10 @@ const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=yH5iS2qa
 
 // const issURL = 'api.open-notify.org/iss-pass.json?lat=LAT&lon=LON';
 const issURL = 'http://api.open-notify.org/iss-pass.json?lat=';
+const proxyURL = 'https://cors-anywhere.herokuapp.com/'
 
 function passTimes() {
-    fetch(issURL + latitude + "&lon=" + longitude)
+    fetch(proxyURL + issURL + latitude + "&lon=" + longitude)
         .then(function (response) {
             return (response.json());
         })
