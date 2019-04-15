@@ -1,4 +1,5 @@
 document.getElementById('getAddress').addEventListener('click', runGeocode);
+document.getElementById('confirmAddress').addEventListener('click', passTimes);
 
 
 function passTimes() {
@@ -10,9 +11,9 @@ function passTimes() {
             return (response.json());
         })
         .then(function(data){
-            console.log(data)
-        })
-};
+            console.log(data);
+        }
+        )};
 
 function runGeocode() {
     const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=yH5iS2qacftnKf9BfA1LlAPS8JwsAn8S&location=';
