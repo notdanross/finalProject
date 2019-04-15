@@ -1,21 +1,10 @@
-const userStreet  = document.getElementById('street');
-const userCity  = document.getElementById('city');
-const userState = document.getElementById('state');
-const userZip = document.getElementById('zip');
-
-// var latitude = 1;
-// var longitude = 1;
-
 document.getElementById('getAddress').addEventListener('click', runGeocode);
 
-//'http://www.mapquestapi.com/geocoding/v1/address?key=yH5iS2qacftnKf9BfA1LlAPS8JwsAn8S&location=1600+Pennsylvania+Ave+NW,Washington,DC,20500';
-const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=yH5iS2qacftnKf9BfA1LlAPS8JwsAn8S&location=';
-
-// const issURL = 'api.open-notify.org/iss-pass.json?lat=LAT&lon=LON';
-const issURL = 'http://api.open-notify.org/iss-pass.json?lat=';
-const proxyURL = 'https://cors-anywhere.herokuapp.com/'
 
 function passTimes() {
+    const issURL = 'http://api.open-notify.org/iss-pass.json?lat=';
+    const proxyURL = 'https://cors-anywhere.herokuapp.com/';
+    
     fetch(proxyURL + issURL + latitude + "&lon=" + longitude)
         .then(function (response) {
             return (response.json());
@@ -26,6 +15,12 @@ function passTimes() {
 };
 
 function runGeocode() {
+    const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=yH5iS2qacftnKf9BfA1LlAPS8JwsAn8S&location=';
+    const userStreet  = document.getElementById('street');
+    const userCity  = document.getElementById('city');
+    const userState = document.getElementById('state');
+    const userZip = document.getElementById('zip');
+    
     event.preventDefault();
     console.log('You submitted an address... here is the latitude and longitude');
     console.log(encodeURIComponent(userStreet.value));
