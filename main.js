@@ -12,12 +12,12 @@ function passTimes() {
         })
         .then(function(data){
             let times =  ` `
-            console.log(data.response);
-            times = data.response[0].duration
-            // data.response.map(function(n){
-            //     times +=  `<li>${response[n][duration]}</li>
-            //     `
-            // })
+            console.log(data);
+            // times = data.response[n].duration
+            data.response.map(function(n){
+                times +=  `<li>${[n].duration}  ${[n].risetime}</li>
+                `
+            })
             document.getElementById('passTimes').innerHTML = times
         })
     };
