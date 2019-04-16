@@ -11,9 +11,15 @@ function passTimes() {
             return (response.json());
         })
         .then(function(data){
-            console.log(data);
-        }
-        )};
+            let times =  ` `
+            console.log(data.response);
+            data.response.map(function(n){
+                times +=  `<li>${n.response[n][duration]}</li>
+                `
+            })
+            document.getElementById('passTimes').innerHTML = times
+        })
+    };
 
 function runGeocode() {
     const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=yH5iS2qacftnKf9BfA1LlAPS8JwsAn8S&location=';
