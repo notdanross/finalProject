@@ -13,10 +13,11 @@ function passTimes() {
         .then(function(data){
             let times =  ` `
             console.log(data.response);
-            data.response.map(function(n){
-                times +=  `<li>${n.response[n][duration]}</li>
-                `
-            })
+            times = data.response[0].duration
+            // data.response.map(function(n){
+            //     times +=  `<li>${response[n][duration]}</li>
+            //     `
+            // })
             document.getElementById('passTimes').innerHTML = times
         })
     };
