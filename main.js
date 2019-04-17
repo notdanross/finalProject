@@ -1,29 +1,8 @@
+//Event listeners to run functions when user clicks corresponding button
 document.getElementById('getAddress').addEventListener('click', runGeocode);
 document.getElementById('confirmAddress').addEventListener('click', passTimes);
 
-
-function passTimes() {
-    const issURL = 'http://api.open-notify.org/iss-pass.json?lat=';
-    const proxyURL = 'https://cors-anywhere.herokuapp.com/';
-    
-    fetch(proxyURL + issURL + latitude + "&lon=" + longitude)
-        .then(function (response) {
-            return (response.json());
-        })
-        .then(function(data){
-            let times =  ` `
-            console.log(data);
-            // var times = new Date((data.response[0].risetime)*1000);
-            // times = data.response[0].risetime
-            data.response.map(function(n){
-                let pass = new Date((n.risetime)*1000);
-                times +=  `<li>${[pass]}</li>
-                `
-            })
-            document.getElementById('passTimes').innerHTML = times
-        })
-    };
-
+//Tkes user input (address), sends to mapquest API and returns latitude & longitude
 function runGeocode() {
     const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=yH5iS2qacftnKf9BfA1LlAPS8JwsAn8S&location=';
     const userStreet  = document.getElementById('street');
@@ -50,3 +29,26 @@ function runGeocode() {
         })
     document.getElementById("confirmAddress").style.display = "inline";    
 };
+
+//When user confirms address, the lat & long is sent to open-notify api to return ISS pass times
+function passTimes() {
+    const issURL = 'http://api.open-notify.org/iss-pass.json?lat=';
+    const proxyURL = 'https://cors-anywhere.herokuapp.com/';
+    
+    fetch(proxyURL + issURL + latitude + "&lon=" + longitude)
+        .then(function (response) {
+            return (response.json());
+        })
+        .then(function(data){
+            let times =  ` `
+            console.log(data);
+            // var times = new Date((data.response[0].risetime)*1000);
+            // times = data.response[0].risetime
+            data.response.map(function(n){
+                let pass = new Date((n.risetime)*1000);
+                times +=  `<li>${[pass]}</li>
+                `
+            })
+            document.getElementById('passTimes').innerHTML = times
+        })
+    };
