@@ -1,3 +1,7 @@
 .confirmAddress {
-    display: none;
+    display: none; 
+}
+
+.timesData, .userData {
+    visibility: hidden;
 }

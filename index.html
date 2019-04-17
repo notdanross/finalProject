@@ -38,11 +38,13 @@
     </header>
     <main>
         <div class=container>
+            <div class="shadow p-3 mb-5 bg-white rounded">
             <h2>What is the ISS?</h2>
                 <p>The International Space Station (ISS) is the largest man-made satelite orbiting earth.</p>
+            </div>
         </div>
         <div class=container>
-            <form>
+            <form class="shadow p-3 mb-5 bg-white rounded">
                 <h2> When will the ISS pass over my location?</h2>
                     <p>Enter your address below to get the next times the ISS will be visible from your location.</p>
                     <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
@@ -79,13 +81,17 @@
                     <button id="getAddress">Submit</button>
                 </fieldset>
             </form>
-            <div class=container>
-                <p id="latitude"></p>
-                <p id="longitude"></p>
-                <p id="userAddress"></p>
-                <button class="confirmAddress" id="confirmAddress">Confirm</button>
+            <div class="shadow p-3 mb-5 bg-white rounded" id="userData">
+                <div class=container>
+                    <p id="latitude"></p>
+                    <p id="longitude"></p>
+                    <p id="userAddress"></p>
+                    <button class="confirmAddress" id="confirmAddress">Confirm</button>
+                </div>
             </div>
-            <div id="passTimes" class=container></div>
+            <div class="shadow p-3 mb-5 bg-white rounded" id="timesData">
+                <div id="passTimes" class=container></div>
+            </div>
         </div>    
 
     </main>
