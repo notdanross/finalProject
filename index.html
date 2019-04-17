@@ -6,33 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ISS Pass Times</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
 </head>
 
 <body>
     <header>
-        <div>
-            <h1>ISS Pass Times</h1>   
-            <ul>
-                <li>Home</li>
-                <li>Pass Times</li>
-                <li>ISS Facts</li>
-                <li>Astronomy Facts</li>
-                <li>About</li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">ISS Pass Times</a>   
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">Home</li>
+                <li class="nav-item">ISS Facts</li>
+                <li class="nav-item">Astronomy Facts</li>
+                <li class="nav-item">About</li>
             </ul>
-        </div>
+        </nav>
     </header>
     <main>
-        <div>
+        <div class=container>
             <h2>What is the ISS?</h2>
                 <p>The International Space Station (ISS) is the largest man-made satelite orbiting earth.</p>
         </div>
-        <div>
+        <div class=container>
             <form>
                 <h2> When will the ISS pass over my location?</h2>
                     <p>Enter your address below to get the next times the ISS will be visible from your location.</p>
                     <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
-                <fieldset>
+                <fieldset >
                     <legend>Your Address</legend>
                     <p>
                         <label for="street">
@@ -65,13 +65,13 @@
                     <button id="getAddress">Submit</button>
                 </fieldset>
             </form>
-            <div>
+            <div class=container>
                 <p id="latitude"></p>
                 <p id="longitude"></p>
                 <p id="userAddress"></p>
                 <button class="confirmAddress" id="confirmAddress">Confirm</button>
             </div>
-            <div id="passTimes"></div>
+            <div id="passTimes" class=container></div>
         </div>    
 
     </main>
