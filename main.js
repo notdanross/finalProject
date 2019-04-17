@@ -13,9 +13,11 @@ function passTimes() {
         .then(function(data){
             let times =  ` `
             console.log(data);
-            // times = data.response[n].duration
+            // var times = new Date((data.response[0].risetime)*1000);
+            // times = data.response[0].risetime
             data.response.map(function(n){
-                times +=  `<li>${[n].duration}  ${[n].risetime}</li>
+                let pass = new Date((n.risetime)*1000);
+                times +=  `<li>${[pass]}</li>
                 `
             })
             document.getElementById('passTimes').innerHTML = times
