@@ -27,7 +27,10 @@ function runGeocode() {
             userAddress = data["results"][0]["locations"][0]["street"] + ", " + data["results"][0]["locations"][0]["adminArea5"] + ", " + data["results"][0]["locations"][0]["adminArea3"];
             document.getElementById('userAddress').innerHTML = "Your Address:" + " " + userAddress; 
         })
-    document.getElementById("confirmAddress").style.display = "inline";    
+    setTimeout(revealButton, 250);
+    function revealButton() {
+        document.getElementById("confirmAddress").style.display = "inline"
+    };    
 };
 
 //When user confirms address, the lat & long is sent to open-notify api to return ISS pass times
