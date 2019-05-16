@@ -47,34 +47,34 @@
             <form class="shadow p-3 mb-5 bg-white rounded">
                 <h2> When will the ISS pass over my location?</h2>
                     <p>Enter your address below to get the next times the ISS will be visible from your location.</p>
-                    <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+                    <p>Required fields are followed by <strong>*</strong>.</p>
                 <fieldset >
                     <legend>Your Address</legend>
                     <p>
                         <label for="street">
                             <span>Street: </span>
-                            <strong><abbr title="required">*</abbr></strong>
+                            <strong>*</strong>
                         </label>
                         <input type="text" id="street" class="street" name="userStreet">
                     </p>
                     <p>
                         <label for="city">
                             <span>City: </span>
-                            <strong><abbr title="required">*</abbr></strong>
+                            <strong>*</strong>
                         </label>
                         <input type="text" id="city" class="city" name="userCity">
                     </p>
                     <p>
                         <label for="state">
                             <span>State: </span>
-                            <strong><abbr title="required">*</abbr></strong>
+                            <strong>*</strong>
                         </label>
                         <input type="text" id="state" class="state" name="userState">
                     </p>
                     <p>
                         <label for="zipCode">
                             <span>Zip Code: </span>
-                            <strong><abbr title="required">*</abbr></strong>
+                            <strong>*</strong>
                         </label>
                         <input type="text" id="zip" class="zipCode" name="userZip">
                     </p>
@@ -82,21 +82,21 @@
                 </fieldset>
             </form>
             <div class="d-none" id="userData">
-                <div class=container>
+                <h2>Please Confirm Your Address</h2>
                     <p id="userAddress"></p>
                     <p id="latitude"></p>
                     <p id="longitude"></p>
                     <button class="confirmAddress" id="confirmAddress">Confirm</button>
-                </div>
             </div>
             <div class="d-none" id="timesData">
+                <h2>Upcoming Passes</h2>
                 <div id="passTimes" class=container></div>
             </div>
         </div>    
 
     </main>
 
-    <footer></footer>
+    <footer>Cread By: Dan Ross, 2019</footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    

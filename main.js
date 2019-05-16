@@ -21,11 +21,11 @@ function runGeocode() {
         .then(function(data){
             console.log(data);
             latitude = data["results"][0]["locations"][0]["latLng"]["lat"];
-            document.getElementById('latitude').innerHTML = "Your latitude:" + " " + latitude;
+            document.getElementById('latitude').innerHTML = "<b>Your Latitude:</b>" + " " + latitude;
             longitude = data["results"][0]["locations"][0]["latLng"]["lng"];
-            document.getElementById('longitude').innerHTML = "Your longitude:" + " " + longitude;
+            document.getElementById('longitude').innerHTML = "<b>Your Longitude:</b>" + " " + longitude;
             userAddress = data["results"][0]["locations"][0]["street"] + ", " + data["results"][0]["locations"][0]["adminArea5"] + ", " + data["results"][0]["locations"][0]["adminArea3"];
-            document.getElementById('userAddress').innerHTML = "Your Address:" + " " + userAddress; 
+            document.getElementById('userAddress').innerHTML = "<b>Your Address:</b>" + " " + userAddress; 
         })
     setTimeout(revealButton, 250);
     function revealButton() {
