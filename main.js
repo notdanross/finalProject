@@ -29,7 +29,8 @@ function runGeocode() {
         })
     setTimeout(revealButton, 250);
     function revealButton() {
-        document.getElementById("confirmAddress").style.display = "inline"
+        document.getElementById('confirmAddress').style.display = "inline";
+        document.getElementById('userData').classList = "shadow p-3 mb-5 bg-white rounded"
     };    
 };
 
@@ -52,6 +53,7 @@ function passTimes() {
                 times +=  `<li>${[pass]}</li>
                 `
             })
-            document.getElementById('passTimes').innerHTML = times
+            document.getElementById('passTimes').innerHTML = times;
+            document.getElementById('timesData').classList = "shadow p-3 mb-5 bg-white rounded";
         })
     };
