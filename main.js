@@ -2,7 +2,7 @@
 document.getElementById('getAddress').addEventListener('click', runGeocode);
 document.getElementById('confirmAddress').addEventListener('click', passTimes);
 
-//Tkes user input (address), sends to mapquest API and returns latitude & longitude
+//Takes user input (address), sends to mapquest API and returns latitude & longitude
 function runGeocode() {
     const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=yH5iS2qacftnKf9BfA1LlAPS8JwsAn8S&location=';
     const userStreet  = document.getElementById('street');
@@ -30,7 +30,9 @@ function runGeocode() {
     setTimeout(revealButton, 250);
     function revealButton() {
         document.getElementById('confirmAddress').style.display = "inline";
-        document.getElementById('userData').classList = "shadow p-3 mb-5 bg-white rounded"
+        document.getElementById('userData').classList = "shadow p-3 mb-5 bg-white rounded";
+        var elmnt = document.getElementById('userData');
+        elmnt.scrollIntoView();
     };    
 };
 
@@ -55,5 +57,7 @@ function passTimes() {
             })
             document.getElementById('passTimes').innerHTML = times;
             document.getElementById('timesData').classList = "shadow p-3 mb-5 bg-white rounded";
+            var elmnt = document.getElementById('userData');
+            elmnt.scrollIntoView();
         })
     };
