@@ -4,7 +4,8 @@ document.getElementById('confirmAddress').addEventListener('click', passTimes);
 
 //Takes user input (address), sends to mapquest API and returns latitude & longitude
 function runGeocode() {
-    const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=yH5iS2qacftnKf9BfA1LlAPS8JwsAn8S&location=';
+    const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=' + mapquestKey + '&location=';
+    // const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=yH5iS2qacftnKf9BfA1LlAPS8JwsAn8S&location=';
     const userStreet  = document.getElementById('street');
     const userCity  = document.getElementById('city');
     const userState = document.getElementById('state');
