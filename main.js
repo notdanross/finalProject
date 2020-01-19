@@ -1,11 +1,10 @@
 //Event listeners to run functions when user clicks corresponding button
 document.getElementById('getAddress').addEventListener('click', runGeocode);
-document.getElementById('confirmAddress').addEventListener('click', passTimes);
+document.getElementById('confirmAddress').addEventListener('click', getPassTimes);
 
 //Takes user input (address), sends to mapquest API and returns latitude & longitude
 function runGeocode() {
-    const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=' + mapquestKey + '&location=';
-    // const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=yH5iS2qacftnKf9BfA1LlAPS8JwsAn8S&location=';
+    const geocodeURL = 'http://www.mapquestapi.com/geocoding/v1/address?key=yH5iS2qacftnKf9BfA1LlAPS8JwsAn8S&location=';
     const userStreet  = document.getElementById('street');
     const userCity  = document.getElementById('city');
     const userState = document.getElementById('state');
@@ -38,7 +37,7 @@ function runGeocode() {
 };
 
 //When user confirms address, the lat & long is sent to open-notify api to return ISS pass times
-function passTimes() {
+function getPassTimes() {
     const issURL = 'http://api.open-notify.org/iss-pass.json?lat=';
     const proxyURL = 'https://cors-anywhere.herokuapp.com/';
     
@@ -49,8 +48,6 @@ function passTimes() {
         .then(function(data){
             let times =  ` `
             console.log(data);
-            // var times = new Date((data.response[0].risetime)*1000);
-            // times = data.response[0].risetime
             data.response.map(function(n){
                 let pass = new Date((n.risetime)*1000);
                 times +=  `<li>${[pass]}</li>
