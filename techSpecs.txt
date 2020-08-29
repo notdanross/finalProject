@@ -2,17 +2,16 @@ Display: mobile
 Languages: javascript, html, css
 Browser: Safari (mobile, ios)
 Third Party Technology:
---google maps (reverse)geocoding info - requires key
+--mapquest (reverse)geocoding info - requires key
 --open-notify API (requires input data in latitude longitude format)
---weather API - https://www.programmableweb.com/api/nasa-predict-sky
---sunset API
 
-1. User inputs location OR allows website to know their location
-2. Input is passed to google maps api
-2. Geographic coordinates are returned
-3. Geographic coordinates get passed to open-notify api
-4. open-notify returns ISS pass times for that location
-5. output is: address confirmation, times of pass, length of pass, and direction of pass
+
+1. User inputs street address
+2. Input is passed to mapquest api
+2. Geographic coordinates returned
+3. Geographic coordinates passed to open-notify api
+4. Open-notify returns ISS pass times for that location
+5. Output is: address confirmation, times of pass, length of pass, and direction of pass
 
 
 Users
