@@ -5,3 +5,17 @@
 .timesData, .userData {
     visibility: hidden;
 }
+
+body {
+    background-color: rgb(150,150,150);
+}
+
+.box {
+    background-color: rgb(255, 248, 231);
+    border-radius: .25em;
+    padding: 5em 
+    box-shadow: 0px 0px, -.25em 0 .5em black;
+    
+}
+
+"shadow p-3 mb-5 bg-white rounded"
