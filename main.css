@@ -18,4 +18,11 @@ body {
     padding: .5em;
 }
 
-"shadow p-3 mb-5 bg-white rounded"
+.navbar {
+    background-color: rgb(195,195,195)
+}
+
+.footer {
+    background-color: rgb(195,195,195)
+}
+    
