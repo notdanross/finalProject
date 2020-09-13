@@ -30,7 +30,7 @@ function runGeocode() {
     setTimeout(revealButton, 250);
     function revealButton() {
         document.getElementById('confirmAddress').style.display = "inline";
-        document.getElementById('userData').classList = "shadow p-3 mb-5 bg-white rounded";
+        document.getElementById('userData').classList = "box";
         var elmnt = document.getElementById('userData');
         elmnt.scrollIntoView();
     };    
@@ -54,7 +54,7 @@ function getPassTimes() {
                 `
             })
             document.getElementById('passTimes').innerHTML = times;
-            document.getElementById('timesData').classList = "shadow p-3 mb-5 bg-white rounded";
+            document.getElementById('timesData').classList = "box";
             var elmnt = document.getElementById('userData');
             elmnt.scrollIntoView();
         })
