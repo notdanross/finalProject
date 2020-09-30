@@ -6,8 +6,14 @@
     visibility: hidden;
 }
 
-body {
+html, body {
     background-color: rgb(150,150,150);
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 .box {
@@ -22,12 +28,17 @@ body {
     background-color: rgb(195,195,195)
 }
 
-.footer {
-    position: absolute;
+.content{
+    flex: 1 0 auto;
+}
+
+.bd-footer {
+    /* position: absolute; */
     bottom: 0;
     width: 100%;
     height: 50px;
     line-height: 50px;
-    background-color: rgb(195,195,195)
+    background-color: rgb(195,195,195);
+    flex-shrink: 0;
 }
     
